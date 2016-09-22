@@ -16,7 +16,7 @@ DEFAULT_CACHE="node_modules bower_components"
 
 BUILD_DIR=${1:-}/library
 CACHE_DIR=${2:-}/library
-ENV_DIR=${3:-}
+ENV_DIR=${3:-}/library
 BP_DIR=$(cd $(dirname ${0:-}); cd ..; pwd)
 
 mkdir -p "$BUILD_DIR/.heroku/node/"
