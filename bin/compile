@@ -132,7 +132,8 @@ build_dependencies() {
 
 header "Building dependencies"
 build_dependencies | output "$LOG_FILE"
-node_modules/webpack/bin/webpack.js
+echo node -v
+node_modules/.bin/webpack
 
 cache_build() {
   local cache_directories=$(get_cache_directories)
