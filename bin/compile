@@ -14,7 +14,7 @@ DEFAULT_CACHE="node_modules bower_components"
 
 ### Configure directories
 
-BUILD_DIR=${1:-}/library
+BUILD_DIR=$(cd ${1:-}; cd library; pwd)
 CACHE_DIR=${2:-}/library
 ENV_DIR=${3:-}/library
 BP_DIR=$(cd $(dirname ${0:-}); cd ..; pwd)
