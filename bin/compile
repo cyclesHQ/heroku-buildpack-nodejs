@@ -132,8 +132,8 @@ build_dependencies() {
 
 header "Building dependencies"
 build_dependencies | output "$LOG_FILE"
-echo ${node -v}
-node_modules/.bin/webpack
+echo $(node -v)
+NODE_ENV=production node_modules/.bin/webpack
 
 cache_build() {
   local cache_directories=$(get_cache_directories)
