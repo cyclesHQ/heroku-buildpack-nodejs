@@ -144,11 +144,8 @@ echo $0
 echo $1
 echo $2
 
-ls -la $0
-echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
-ls -la $1
-echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
-ls -la $2
+
+ls -laR $2
 echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
 NODE_ENV=production node_modules/.bin/webpack -p
 
