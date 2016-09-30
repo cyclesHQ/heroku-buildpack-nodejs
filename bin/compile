@@ -139,6 +139,12 @@ echo $(node -v)
 ls -la
 echo "*****************************************"
 echo "*****************************************"
+
+echo $0
+echo $1
+echo $2
+
+ls -la $1
 NODE_ENV=production node_modules/.bin/webpack -p
 
 cache_build() {
