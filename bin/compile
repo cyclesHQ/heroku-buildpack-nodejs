@@ -145,7 +145,11 @@ echo $1
 echo $2
 
 
-ls -laR $2
+ls -la $2/cedar-14
+ls -la $2/public
+ls -la $2/vendor
+ls -la $2/tmp
+ls -la $2/library
 echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
 NODE_ENV=production node_modules/.bin/webpack -p
 
