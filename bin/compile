@@ -3,6 +3,9 @@
 
 ### Configure environment
 
+printenv
+echo "****************************************"
+echo "****************************************"
 set -o errexit    # always exit on error
 set -o pipefail   # don't ignore exit codes when piping output
 set -o nounset    # fail on unset variables
@@ -133,6 +136,9 @@ build_dependencies() {
 header "Building dependencies"
 build_dependencies | output "$LOG_FILE"
 echo $(node -v)
+printenv
+echo "*****************************************"
+echo "*****************************************"
 NODE_ENV=production node_modules/.bin/webpack -p
 
 cache_build() {
