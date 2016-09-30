@@ -3,9 +3,6 @@
 
 ### Configure environment
 
-ls -laR
-echo "****************************************"
-echo "****************************************"
 set -o errexit    # always exit on error
 set -o pipefail   # don't ignore exit codes when piping output
 set -o nounset    # fail on unset variables
@@ -136,21 +133,7 @@ build_dependencies() {
 header "Building dependencies"
 build_dependencies | output "$LOG_FILE"
 echo $(node -v)
-ls -laR
-echo "*****************************************"
-echo "*****************************************"
 
-echo $0
-echo $1
-echo $2
-
-
-ls -la $2/cedar-14
-ls -la $2/public
-ls -la $2/vendor
-ls -la $2/tmp
-ls -la $2/library
-echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
 NODE_ENV=production node_modules/.bin/webpack -p
 
 cache_build() {
