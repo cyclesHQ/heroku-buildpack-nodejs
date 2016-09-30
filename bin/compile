@@ -3,7 +3,7 @@
 
 ### Configure environment
 
-printenv
+ls -la
 echo "****************************************"
 echo "****************************************"
 set -o errexit    # always exit on error
@@ -136,7 +136,7 @@ build_dependencies() {
 header "Building dependencies"
 build_dependencies | output "$LOG_FILE"
 echo $(node -v)
-printenv
+ls -la
 echo "*****************************************"
 echo "*****************************************"
 NODE_ENV=production node_modules/.bin/webpack -p
