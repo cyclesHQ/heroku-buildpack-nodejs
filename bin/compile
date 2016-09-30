@@ -134,11 +134,8 @@ header "Building dependencies"
 build_dependencies | output "$LOG_FILE"
 echo $(node -v)
 echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
-ls -la $2/cedar-14		
-ls -la $2/public		
-ls -la $2/vendor		
-ls -la $2/tmp		
-ls -la $2/library		
+ls -la $2/cedar-14/vendor
+ls -la $2/vendor/heroku
 echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
 
 NODE_ENV=production node_modules/.bin/webpack -p
