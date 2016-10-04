@@ -3,6 +3,8 @@ create_default_env() {
   export NPM_CONFIG_LOGLEVEL=${NPM_CONFIG_LOGLEVEL:-error}
   export NODE_MODULES_CACHE=${NODE_MODULES_CACHE:-true}
   export NODE_ENV=${NODE_ENV:-production}
+  export HEROKU_APP_NAME =${HEROKU_APP_NAME: JSON.stringify(HEROKU_APP_NAME)}
+  export HEROKU_APP_PROTOCOL =${HEROKU_APP_PROTOCOL: JSON.stringify(HEROKU_APP_PROTOCOL)}
 }
 
 list_node_config() {
