@@ -18,8 +18,6 @@ list_node_config() {
 }
 
 export_env_dir() {
-  local env_dir=$1
-  echo "---------asd-------"
   echo "$env_dir"
   if [ -d "$env_dir" ]; then
     local whitelist_regex=${2:-''}
