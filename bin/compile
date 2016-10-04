@@ -132,27 +132,6 @@ build_dependencies() {
 
 header "Building dependencies"
 build_dependencies | output "$LOG_FILE"
-echo $(node -v)
-echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
-ls -la $2/cedar-14/vendor
-ls -la $2/vendor/heroku
-echo '$2/vendor/heroku/buildpack_ruby_version'
-cat $2/vendor/heroku/buildpack_ruby_version
-echo '$2/vendor/heroku/buildpack_version'
-cat $2/vendor/heroku/buildpack_version
-echo '$2/vendor/heroku/bundler_version'
-cat $2/vendor/heroku/bundler_version
-echo '$2/vendor/heroku/rubygems_version'
-cat $2/vendor/heroku/rubygems_version
-echo '$2/vendor/heroku/ruby_version'
-cat $2/vendor/heroku/ruby_version
-echo '$2/vendor/heroku/secret_key_base'
-cat $2/vendor/heroku/secret_key_base
-echo '$2/vendor/heroku/stack'
-cat $2/vendor/heroku/stack
-echo "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
-
-NODE_ENV=production node_modules/.bin/webpack -p
 
 cache_build() {
   local cache_directories=$(get_cache_directories)
