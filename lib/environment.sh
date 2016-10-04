@@ -21,12 +21,12 @@ list_node_config() {
 
 export_env_dir() {
   local env_dir=$1
+  echo "---------asd-------"
+  echo "$env_dir"
   if [ -d "$env_dir" ]; then
     local whitelist_regex=${2:-''}
     local blacklist_regex=${3:-'^(PATH|GIT_DIR|CPATH|CPPATH|LD_PRELOAD|LIBRARY_PATH|LANG)$'}
-    
-    echo "---------asd-------"
-    echo "$env_dir"
+
     if [ -d "$env_dir" ]; then
       for e in $(ls $env_dir); do
         echo "$e"
